@@ -67,7 +67,7 @@ namespace WebApi1.Services
             return await _context.Values.FirstOrDefaultAsync(e => e.Id == id);
         }
 
-        public void UpdateValue(ValueUpdateModel model)
+        public void UpdateValue(Value model)
         {
             var existingValue = _context.Values.Find(model.Id);
 

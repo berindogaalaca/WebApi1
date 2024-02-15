@@ -61,7 +61,7 @@ namespace WebApi1.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] ValueUpdateModel model, ValueRepository valueRepository)
+        public async Task<IActionResult> Update(int id, [FromBody] Value model, ValueRepository valueRepository)
         {
             if (model == null)
             {
@@ -75,7 +75,7 @@ namespace WebApi1.Controllers
                 return NotFound();
             }
 
-            var updatedValue = new ValueUpdateModel
+            var updatedValue = new Value
             {
                 Id = id,
                 Name = model.Name
