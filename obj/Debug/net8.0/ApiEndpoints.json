@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "WebApi1.Controllers.ValuesController",
+    "Method": "Create",
+    "RelativePath": "api/Values",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebApi1.Models.Value",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi1.Controllers.ValuesController",
     "Method": "Get",
     "RelativePath": "api/Values",
     "HttpMethod": "GET",

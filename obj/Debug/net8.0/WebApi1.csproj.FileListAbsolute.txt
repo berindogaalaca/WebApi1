@@ -102,3 +102,4 @@ C:\Users\Doa\source\repos\WebApi1\WebApi1\bin\Debug\net8.0\Swashbuckle.AspNetCor
 C:\Users\Doa\source\repos\WebApi1\WebApi1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Doa\source\repos\WebApi1\WebApi1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Doa\source\repos\WebApi1\WebApi1\obj\Debug\net8.0\WebApi1.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Doa\source\repos\WebApi1\WebApi1\obj\Debug\net8.0\WebApi1.sourcelink.json

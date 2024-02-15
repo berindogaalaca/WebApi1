@@ -14,11 +14,27 @@ namespace WebApi1.Controllers
         {
             _valueRepository = valueRepository;
         }
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] Value model, ValueRepository valueRepository)
+        {
+            if (model == null)
+            {
+                return BadRequest("Invalid model");
+            }
 
+            var createValue = new Value
+            {
+       
+                Name = model.Name
+            };
+
+            valueRepository.CreateValue(createValue);
+
+            return NoContent();
+        }
         [HttpGet]
         public IActionResult Get()
-        {
-            _valueRepository.LazyInitializer(); 
+        { 
             var values = _valueRepository.GetAllValues();
             return Ok(values);
         }

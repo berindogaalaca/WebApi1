@@ -17,7 +17,7 @@ namespace WebApi1.Services
             _context = context;
         }
 
-        public void LazyInitializer()
+        /*public void LazyInitializer()
         {
             _context.Database.EnsureCreated();
 
@@ -41,7 +41,7 @@ namespace WebApi1.Services
 
                 _context.SaveChanges();
             }
-        }
+        }*/
 
         public IEnumerable<Value> GetAllValues()
         {
@@ -81,7 +81,15 @@ namespace WebApi1.Services
             _context.SaveChanges();
         }
 
+        public void CreateValue(Value createValue)
+        {
+            _context.Database.EnsureCreated();
 
+                    _context.Values.Add(createValue);
+                Console.WriteLine("burada");
 
+                _context.SaveChanges();
+            
+        }
     }
 }
