@@ -76,7 +76,7 @@ namespace WebApi1.Services
                 throw new InvalidOperationException($"Value with Id = {model.Id} not found");
             }
 
-            existingValue.Name = model.Name; // Modeldeki Name özelliğini güncelle
+            existingValue.Name = model.Name; 
 
             _context.SaveChanges();
         }

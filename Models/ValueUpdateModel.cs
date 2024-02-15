@@ -2,7 +2,7 @@
 {
     public class ValueUpdateModel
     {
-        public int Id { get; set; } // Id özelliği eklendi
+        public int Id { get; set; }
 
         public string Name { get; set; }
     }

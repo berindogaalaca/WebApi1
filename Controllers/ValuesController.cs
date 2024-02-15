@@ -18,7 +18,7 @@ namespace WebApi1.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            _valueRepository.LazyInitializer(); // Bu satırı eklemek gerekmeyebilir, bağlamıza bağlıdır
+            _valueRepository.LazyInitializer(); 
             var values = _valueRepository.GetAllValues();
             return Ok(values);
         }
@@ -59,16 +59,15 @@ namespace WebApi1.Controllers
                 return NotFound();
             }
 
-            // Güncelleme işlemi için model oluştur ve varolan değerin özelliklerini kopyala
             var updatedValue = new ValueUpdateModel
             {
                 Id = id,
                 Name = model.Name
             };
 
-            valueRepository.UpdateValue(updatedValue); // Güncellenen değeri repository'e gönder
+            valueRepository.UpdateValue(updatedValue); 
 
-            return NoContent(); // 204 No Content response
+            return NoContent(); 
         }
 
     }

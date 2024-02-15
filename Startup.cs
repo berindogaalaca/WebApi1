@@ -27,7 +27,7 @@ namespace WebApi1
 
             services.AddScoped<ValueRepository>();
 
-            // Swagger servisini ekleyin
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
@@ -50,12 +50,11 @@ namespace WebApi1
                 endpoints.MapControllers();
             });
 
-            // SwaggerUI Middleware'ini kullanın ve RoutePrefix'i ayarlayın
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                c.RoutePrefix = string.Empty; // Boş bir dize olarak ayarlayarak doğrudan / adresine yönlendirme yapar
+                c.RoutePrefix = string.Empty; 
             });
         }
     }
