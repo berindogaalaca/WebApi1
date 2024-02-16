@@ -85,7 +85,7 @@ namespace WebApi1.Services
         {
             _context.Database.EnsureCreated();
 
-                    _context.Values.Add(createValue);
+                _context.Values.Add(createValue);
                 Console.WriteLine("burada");
 
                 _context.SaveChanges();
